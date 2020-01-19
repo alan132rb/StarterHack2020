@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom';
 import './index.css';
 
@@ -6,27 +7,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Form from 'react-bootstrap/Form'
 
-import { Navbar } from 'react-bootstrap'
-import { Nav } from 'react-bootstrap'
-import { NavDropdown } from 'react-bootstrap'
-
-import { Modal } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 
-import Carousel from 'react-bootstrap/Carousel'
-import { useState } from 'react';
-
+import AutomaticSlide from "./SlideShow"
 import FormControl from 'react-bootstrap/Form'
-
-import rOne from './pics/RoomOne.jpg'
-import rTwo from './pics/RoomTwo.jpg'
-import rThree from './pics/RoomThree.jpg'
+import MyTab from "./NavBar"
+import 'firebase/auth';
 
 // importing NavBar //
-import MyTab from "./NavBar"
+
 
 // importing SlideShow//
-import AutomaticSlide from "./SlideShow"
 
 
 class MainPage extends React.Component {
@@ -69,6 +60,10 @@ class MainPage extends React.Component {
             </>);
     }
 }
+
+
+ReactDOM.render(<MyTab />, document.getElementById("NavBar"));
+ReactDOM.render(<MainPage />, document.getElementById("SlideShow"));
 
 
 ReactDOM.render(<MyTab />, document.getElementById("NavBar"));
