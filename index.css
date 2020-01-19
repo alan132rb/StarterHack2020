@@ -13,6 +13,7 @@ body {
   font-family:"Lato",Sans-serif;
 }
 
+/* button for slideshow */
 .button {     
   background-color: Transparent;
   background-repeat:no-repeat;
@@ -55,10 +56,6 @@ div.c-wrapper{
   color:#000;
 }
 
-.btn:hover{
-   box-shadow:0px 10px 10px rgba(0,0,0,0.2);
-   transform : translateY(-3px);
-}
 
 .btn:active{
   box-shadow:0px 5px 10px black;
@@ -112,94 +109,190 @@ a.bold {
 .centered {
   position: absolute;
   left: 50%;
-  margin-left: -50px;
+  
 }
 
 .clear {
   opacity: 0;
 }
 
-  .searchbar{
-  height: 60px;
-  background-color: #353b48;
-  border-radius: 30px;
-  padding: 10px;
-  }
+/* ******************************** */
+ 
 
-  .search_input{
+/* css for the contact form */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: #bbb5af;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: #bbb5af;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder {
+  color: #bbb5af;
+}
+
+input::-ms-placeholder, textarea::-ms-placeholder {
+  color: #aca49c;
+  font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+  color: #bbb5af;
+}
+
+header {
+  position: relative;
+  margin: 100px 0 25px 0;
+  font-size: 2.3em;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: transparent;
+  outline: none;
+  color: #726659;
+  
+  border: solid 1px #b3aca7;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #b3aca7;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+
+#submit {
+  width: 94%;
+  
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  background-color: rgb(64, 127, 236);
   color: white;
-  border: 0;
-  outline: 0;
-  background: none;
-  width: 0;
-  caret-color:transparent;
-  line-height: 40px;
-  transition: width 0.4s linear;
-  }
 
-  .searchbar:hover > .search_input{
-  padding: 0 10px;
-  width: 450px;
-  caret-color:red;
-  transition: width 0.4s linear;
-  }
+  outline:none;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bolder;
+  border: solid 1px rgb(64, 127, 236);
+  border-top: none;
+}
 
-  .searchbar:hover > .search_icon{
-  background: white;
-  color: #e74c3c;
-  }
+#submit:hover {
+  color: #e2dedb;
+}
 
-  .search_icon{
-  height: 40px;
-  width: 40px;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color:white;
-  text-decoration:none;
-  }
 
-  /*New css content */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
 
-  @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+/* spacing between the postings*/
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-gap: 50px 100px;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 20px;
+  left: 50%;
+  margin-left: 70px;
+  margin-right: auto;
+}
+
+/* make size of img fixed */
+
+roompic.Card.Img{
+  height:auto;
+  width:auto;/*maintain aspect ratio*/
+  max-height: 300px;
+  max-width:500px;
+}
+
+/* import fonts */
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+.card{
+  font-family: 'Oswald', sans-serif !important;
+}
+
+/* change opacity of background */
+.myDiv {
+  position: relative;
+  z-index: 1;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 8888888888888888888888888888888 */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
 .CursiveFont{
   font-family: 'Lobster', cursive;
@@ -220,4 +313,23 @@ a.bold {
 
 .spaces{
   margin-right: 500px;
+}
+
+
+/* 8888888888888888888/
+/* Create three equal columns that floats next to each other */
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  margin: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
