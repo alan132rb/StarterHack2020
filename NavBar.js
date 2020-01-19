@@ -1,4 +1,4 @@
-// import { createUser, signIn } from "./components/Firebase/config"
+import { createUser, signIn } from "./components/Firebase/config"
 
 import React, { Component } from 'react';
 import './index.css';
@@ -15,15 +15,13 @@ import {Navbar} from 'react-bootstrap'
 
 import { Button } from 'react-bootstrap'
 
-import SubmitForm from './form'
+import SubmitForm from './forms'
 
 var LoggedIn = true
 
 function loggedOn() {
 
 }
-
-
 
 const INITIAL_STATE = {
     username: '',
@@ -38,6 +36,7 @@ const LOGIN_STATE = {
     password: ''
 }
 
+
 class LogInForm extends React.Component {
     constructor(props) {
         super(props);
@@ -48,7 +47,8 @@ class LogInForm extends React.Component {
         this.props.signLog()
         console.log(this.state.email)
         console.log(this.state.password)
-    //    signIn(this.state.email, this.state.password)
+        signIn(this.state.email, this.state.password)
+        event.preventDefault()
 
     }
     render() {
@@ -72,7 +72,7 @@ class LogInForm extends React.Component {
                     <Form.Control type="password" onChange={e => this.state.password = e.target.value} />
                 </Form.Group>
                 <div class="text-center">
-                    <Button variant="primary" type="submit" >
+                    <Button variant="primary" type="submit">
                         Login
                     </Button>
                 </div>
@@ -96,7 +96,7 @@ class SignUpForm extends React.Component {
 
     SubmitForm = event => {
         this.props.signLog()
-    //    createUser(this.state.email, this.state.passwordOne)
+        createUser(this.state.email, this.state.passwordOne)
         this.setState({ ...INITIAL_STATE });
         event.preventDefault();
     }
@@ -254,7 +254,6 @@ class MyTab extends React.Component {
     }
 
     signLog() {
-        console.log("running signLog");
         this.setState(prevState => {
             return {
                 signedLogged: true
