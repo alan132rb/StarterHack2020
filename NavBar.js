@@ -1,4 +1,4 @@
-import { createUser, signIn } from "./components/Firebase/config"
+// import { createUser, signIn } from "./components/Firebase/config"
 
 import React, { Component } from 'react';
 import './index.css';
@@ -15,7 +15,7 @@ import {Navbar} from 'react-bootstrap'
 
 import { Button } from 'react-bootstrap'
 
-import SubmitForm from './forms'
+import SubmitForm from './form'
 
 var LoggedIn = true
 
@@ -48,7 +48,7 @@ class LogInForm extends React.Component {
         this.props.signLog()
         console.log(this.state.email)
         console.log(this.state.password)
-        signIn(this.state.email, this.state.password)
+    //    signIn(this.state.email, this.state.password)
 
     }
     render() {
@@ -96,7 +96,7 @@ class SignUpForm extends React.Component {
 
     SubmitForm = event => {
         this.props.signLog()
-        createUser(this.state.email, this.state.passwordOne)
+    //    createUser(this.state.email, this.state.passwordOne)
         this.setState({ ...INITIAL_STATE });
         event.preventDefault();
     }
@@ -231,7 +231,7 @@ class LogInButton extends React.Component {
     render() {
         return (
             <>
-                <button id="myBtn" onClick={this.toggleModal}>Open Modal</button>
+                <button id="myBtn" class="oval" onClick={this.toggleModal}>Login</button>
                 <div id="myModal" class="modal" style={{display: this.state.closedModal ? 'none':'block'}}>
                     <div class="modal-content">
                         <span class="close" onClick={this.closeModal}>&times;</span>
@@ -282,12 +282,16 @@ class MyTab extends React.Component {
                     <Nav style={{ display: this.state.signedLogged ? 'none' : 'block' }}>
                         <LogInButton signLog={this.signLog} />
                     </Nav>
+
                     <Nav style={{ display: this.state.signedLogged ? 'block' : 'none' }}>
-                        <h1>Welcome</h1>
+                        <div class="CursiveFont spaces">Welcome</div>
                     </Nav>
+
                     <Nav style={{ display: this.state.signedLogged ? 'block' : 'none'}}>
                         <SubmitForm/>
                     </Nav>
+
+                    
                 </Navbar.Collapse>
             </Navbar>
         );

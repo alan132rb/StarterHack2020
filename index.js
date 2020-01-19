@@ -12,7 +12,7 @@ import { Button } from 'react-bootstrap'
 import AutomaticSlide from "./SlideShow"
 import FormControl from 'react-bootstrap/Form'
 import MyTab from "./NavBar"
-import 'firebase/auth';
+// import 'firebase/auth';
 
 // importing NavBar //
 
@@ -60,10 +60,6 @@ class MainPage extends React.Component {
             </>);
     }
 }
-
-
-ReactDOM.render(<MyTab />, document.getElementById("NavBar"));
-ReactDOM.render(<MainPage />, document.getElementById("SlideShow"));
 
 
 ReactDOM.render(<MyTab />, document.getElementById("NavBar"));

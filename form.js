@@ -10,6 +10,7 @@ import { Modal } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 
 
+//  Form for info about sublet //
 class Contact extends React.Component {
     render() {
         return (
@@ -17,24 +18,23 @@ class Contact extends React.Component {
                 <input id="name" type="text" placeholder="Title"></input>
                 <input id="email" type="text" placeholder="Address"></input>
                 <textarea id="message" type="text" placeholder="Description"></textarea>
-
-
-
-
                 <input id="submit" type="submit" value="Submit"></input>
             </form>
         )
     }
 }
 
+// input your files here
 class UploadFile extends React.Component {
     render() {
         return (
             <div className="input-group">
                 <div className="input-group-prepend">
+                    <button>
                     <span className="input-group-text" id="inputGroupFileAddon01">
                         Upload
     </span>
+    </button>
                 </div>
                 <div className="custom-file">
                     <input
@@ -60,11 +60,11 @@ function SubmitForm() {
 
     return (
 
-        <Card style={{ width: '18rem' }}>
-
-            <Button variant="primary" onClick={handleShow} id="Modal" >
-                Contact Subletter
-                </Button>
+       
+        <div>
+            <button  onClick={handleShow} id="Modal" class="oval">
+                Upload Listing
+                </button>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Body>
@@ -73,7 +73,9 @@ function SubmitForm() {
                 </Modal.Body>
             </Modal>
 
-        </Card>
+            </div>
+
+       
 
     )
 }
